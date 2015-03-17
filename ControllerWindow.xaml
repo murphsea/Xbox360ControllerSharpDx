@@ -1,0 +1,59 @@
+﻿<Window x:Class="Xbox360ControllerSharpDx.ControllerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Controller Window" Height="492" Width="525" Closing="Window_Closing" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="0,0,-17,1">
+        <Ellipse x:Name="btnYYes" Fill="White" HorizontalAlignment="Left" Height="47" Margin="230,160,0,0" Stroke="Black" VerticalAlignment="Top" Width="47"/>
+
+        <Ellipse x:Name="btnBYes" Fill="White" HorizontalAlignment="Left" Height="47" Margin="271,217,0,0" Stroke="Black" VerticalAlignment="Top" Width="47"/>
+
+        <Ellipse x:Name="btnAYes" Fill="White" HorizontalAlignment="Left" Height="47" Margin="229,269,0,0" Stroke="Black" VerticalAlignment="Top" Width="47"/>
+
+        <Ellipse x:Name="btnXYes" Fill="White" HorizontalAlignment="Left" Height="47" Margin="189,217,0,0" Stroke="Black" VerticalAlignment="Top" Width="47"/>
+        <Button x:Name="btnConnect" Content="Connect to Xbox 360 Controller" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="304" Click="btnConnect_Click"/>
+        <Label x:Name="lblConnectMessage" Content="" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="304"/>
+        <ComboBox x:Name="ControllerSelection" HorizontalAlignment="Left" Margin="346,10,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Controller One" IsSelected="True"/>
+            <ComboBoxItem Content="Controller Two"/>
+            <ComboBoxItem Content="Controller Three"/>
+            <ComboBoxItem Content="Controller Four"/>
+        </ComboBox>
+        <Label Content="Left Thumb Stick" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Right Thumb Stick" HorizontalAlignment="Left" Margin="399,66,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="D Pad" HorizontalAlignment="Left" Margin="194,66,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="10,128,0,0" VerticalAlignment="Top"/>
+        <Label Content="V" HorizontalAlignment="Left" Margin="194,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="399,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="399,128,0,0" VerticalAlignment="Top"/>
+        <Ellipse x:Name="btnX" Fill="#FF0404FB" HorizontalAlignment="Left" Height="38" Margin="194,221,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Ellipse x:Name="btnA" Fill="#FF32B800" HorizontalAlignment="Left" Height="38" Margin="234,273,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Ellipse x:Name="btnB" Fill="Red" HorizontalAlignment="Left" Height="38" Margin="276,221,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Ellipse x:Name="btnY" Fill="#FFDED400" HorizontalAlignment="Left" Height="38" Margin="235,164,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Label Content="Left Trigger" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Right Trigger" HorizontalAlignment="Left" Margin="399,256,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="V" HorizontalAlignment="Left" Margin="10,287,0,0" VerticalAlignment="Top"/>
+        <Label Content="V" HorizontalAlignment="Left" Margin="399,287,0,0" VerticalAlignment="Top"/>
+        <Rectangle x:Name="rectLeftButton" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="19" Margin="10,329,0,0" Stroke="Black" VerticalAlignment="Top" Width="116"/>
+        <Rectangle x:Name="rectRightButton" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="19" Margin="390,329,0,0" Stroke="Black" VerticalAlignment="Top" Width="115"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="204,227,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="A" HorizontalAlignment="Left" Margin="244,279,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="B" HorizontalAlignment="Left" Margin="286,227,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="245,170,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="lblLeftStickX" Content="lblLeftStickX" HorizontalAlignment="Left" Margin="32,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label x:Name="lblLeftStickY" Content="lblLeftStickY" HorizontalAlignment="Left" Margin="32,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label x:Name="lblDpadState" Content="lblDpadState" HorizontalAlignment="Left" Margin="216,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label x:Name="lblRightStickX" Content="lblRightStickX" HorizontalAlignment="Left" Margin="421,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label x:Name="lblRightStickY" Content="lblRightStickY" HorizontalAlignment="Left" Margin="421,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label x:Name="lblLeftTriggerV" Content="lblLeftTriggerV" HorizontalAlignment="Left" Margin="27,287,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label x:Name="lblRightTriggerV" Content="lblRightTriggerV" HorizontalAlignment="Left" Margin="416,287,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label Content="To End press A and B at the same time" HorizontalAlignment="Left" Margin="143,380,0,0" VerticalAlignment="Top" Background="#FFFD0000" Foreground="#FFF7F7F7" Width="217"/>
+        <Label Content="V" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblLeftStickState" Content="lblLeftStickState" HorizontalAlignment="Left" Margin="32,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label Content="V" HorizontalAlignment="Left" Margin="399,155,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblRightStickState" Content="lblRightStickState" HorizontalAlignment="Left" Margin="421,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.289,-0.308"/>
+        <Label Content="Left Shoulder Button" HorizontalAlignment="Left" Margin="18,326,0,0" VerticalAlignment="Top" FontSize="10" Width="108"/>
+        <Label Content="Right Shoulder Button" HorizontalAlignment="Left" Margin="395,326,0,0" VerticalAlignment="Top" FontSize="10" Width="117"/>
+
+    </Grid>
+</Window>
