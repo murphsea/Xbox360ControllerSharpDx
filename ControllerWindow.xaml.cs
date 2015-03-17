@@ -86,8 +86,6 @@ namespace Xbox360ControllerSharpDx
             // Loop until both A and B buttons are pressed at the same time
             while(_currentControllerState.Gamepad.Buttons!=(SharpDX.XInput.GamepadButtonFlags.B | SharpDX.XInput.GamepadButtonFlags.A))
             {
-                // Get DPad State
-                
 
                 Application.Current.Dispatcher.Invoke(new Action(() =>
                     {
